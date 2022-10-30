@@ -35,7 +35,7 @@
 }
 .button--border span{
 	display: inline-block;
-	padding: 16px 40px;
+	padding: 17px 40px;
 	border-radius: 4px;
 	box-shadow: -60px 0 20px 20px #FF3F3A, 60px 0 20px 20px #F75E05;
 }
