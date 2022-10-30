@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap");
+body{
+	color: #424551;	
+	font-size: 16px;
+	font-family: "Lato", sans-serif;
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+}
+.wrapper > main{
+	flex: 1 1 auto;
+}
+[class*="__container"]{
+	max-width: 1260px;
+	padding: 0 15px;
+	margin: 0 auto;
+	/* background-color: #e3e3e3; */
+}
+/* ---------------------------------- */	
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	padding: 20px 0;
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	font-weight: 700;
+}
+.header__logo {
+}
+.header__menu {
+	flex: 1 1 auto;
+}
+.header__list-menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.list {
+}
+.list__item {
+}
+.list__menu-item {
+	line-height: 1.6;
+}
+.list__menu-item:hover{
+	text-decoration: underline;
+}
+.header__actions {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+	flex: 0 0 auto;
+}
+.header__button {
+}
+.header__auth {
+	position: relative;
+	line-height: 1.6;
+	padding-left: 24px;
+	background: url('../img/icons/person.svg') 0 3px no-repeat;
+}
+
+.header__auth:hover span{
+	text-decoration: underline;
+}
+/* ---------------------------------- */
+.page-main{
+	background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+	padding: 200px 0 80px 0;
+	position: relative;
+}
+.main__page{
+	margin-bottom: 180px;
+}
+.page-main__container{
+	position: relative;
+	/* z-index: 2; */
+}
+.page-main__basis {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;	
+	margin-bottom: 190px;
+}
+.page-main__content{
+	flex: 0 1 50%;
+	align-self: center;
+	/* padding-right: 40px; */
+	max-width: 496px;
+}
+.page-main__img{
+	flex: 0 1 50%;
+	margin-right: -47px;
+}
+.page-main__img img{
+	max-width: 100%;
+	/* transform: translate(7.8%, 0); */
+}
+.page-main__content >*:last-child {
+	margin-bottom: 0;
+}
+.page-main__btn-play {
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	line-height: 1.5;
+	font-size: 14px;
+	margin-bottom: 55px;
+	position: relative;
+}
+.page-main__btn-play::before{
+	content: "";
+	border-radius: 50%;
+	background: #FF3F3A url("../img/icons/play.svg") center / 16px 16px no-repeat;
+	flex: 0 0 52px;
+	width: 52px;
+	height: 52px;
+	z-index: 2;
+	transition: background .3s ease;
+}
+.page-main__btn-play::after{
+	content: "";
+	background: #FF3F3A;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	opacity: 0.2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: btn-play 4s ease-in-out infinite normal running 0s;
+}
+.page-main__btn-play:hover::before{
+	background: #dd2b25 url("../img/icons/play.svg") center / 16px 16px no-repeat;
+}
+@keyframes btn-play {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(2);
+	}
+}
+.page-main__title {
+	line-height: 1.3;
+	font-size: 64px;
+	letter-spacing: 1px;
+	font-weight: 900;	
+	margin-bottom: 60px;	
+}
+.page-main__btns {
+	
+}
+.btns {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+}
+.page-main__btns:not(:last-child){
+	margin-bottom: 36px;
+}
+.achievements{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.achievements__item{
+	position: relative;
+	line-height: 1.6;
+	display: flex;
+	align-items: center;
+	color: #1E212C;
+}
+.achievements__item span{
+	font-size: 46px;
+	line-height: 1.3;
+	font-weight: 900;
+	padding-right: 12px;
+	
+}
+.achievements__item:not(:last-child)::after{
+	content: "";
+	display: inline-block;
+	flex: 0 0 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FF3F3A;
+	margin-left: 66px;
+}
+.page-main__decor {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+.decor-main-page__decor {
+	position: absolute;
+}
+.decor-main-page__decor--1 {
+	background: url('../img/icons/01.svg') 0 0 no-repeat;
+	width: 96px;
+	height: 96px;
+	top: 12.31%;
+	left: 4.27%;
+}
+.decor-main-page__decor--2 {
+	background: url('../img/icons/02.svg') 0 0 no-repeat;
+	width: 284px;
+	height: 284px;
+	left: -5.83%;
+	bottom: -9.25%;	
+}
+.decor-main-page__decor--3 {
+	background: url('../img/icons/03.svg') 0 0 no-repeat;
+	width: 61px;
+	height: 61px;
+	left: 38.17%;
+	bottom: 24.16%;	
+}
+.decor-main-page__decor--4 {
+	background: url('../img/icons/04.svg') 0 0 no-repeat;
+	width: 88px;
+	height: 47px;
+	top: 45%;
+	left: 40.72%;
+}
+.decor-main-page__decor--5 {
+	background: url('../img/icons/01.svg') 0 0 no-repeat;
+	width: 110px;
+	height: 110px;
+	right: 5%;
+	top: -2.3%;
+	transform: rotate(134deg);
+}
+.decor-main-page__decor--6 {
+	background: url('../img/icons/05.svg') 0 0 no-repeat;
+	width: 187px;
+	height: 137px;
+	right: -1.56%;
+	bottom: 18%;
+}
+/* ----------------------------------------------- */
+.who-we-are {
+	position: relative;
+}
+.who-we-are__container {
+	position: relative;
+	z-index: 2;
+}
+.who-we-are__basis {
+	display: flex;
+	justify-content: space-between;
+	/* gap: 135px; */
+}
+.who-we-are__img {
+	flex: 0 0 57.32%;
+}
+.who-we-are__img img{
+	max-width: 100%;
+}
+.who-we-are__content{
+	/* flex: 1 1 auto; */
+	max-width: 390px;
+}
+.who-we-are__content >*:last-child {
+	margin-bottom: 0;
+}
+.who-we-are__label {
+	text-transform: uppercase;
+	color: #1E212C;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-bottom: 8px;
+}
+.who-we-are__title {
+	color: #1E212C;
+	font-weight: 900;
+	line-height: 1.3;
+	font-size: 46px;
+	margin-bottom: 40px;
+}
+.who-we-are__list {
+	margin-bottom: 48px;
+}
+.list-who-we {
+}
+.list-who-we__item {
+	line-height: 1.6;
+	position: relative;
+	padding-left: 32px;
+}
+.list-who-we__item::before{
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: url('../img/icons/check.svg') 0 0 no-repeat;
+	
+}
+.list-who-we__item:not(:last-child){
+	margin-bottom: 12px;
+}
+.who-we-are__btn {
+	font-size: 14px;
+	padding: 13px 32px;
+}
+.who-we-are__btn:not(:last-child){
+	margin-bottom: 20px;
+}
+.who-we-are__decor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* pointer-events: none; */
+}
+.decor-who-we-are {
+}
+.decor-who-we-are__component {
+	position: absolute;
+
+}
+.decor-who-we-are__component--first {
+	width: 287px;
+	height: 287px;
+	background: url('../img/icons/06.svg') 0 0 no-repeat;
+	right: -8.6%;
+	bottom: 0;
+}
+.decor-who-we-are__component--second {
+	width: 133px;
+	height: 182px;
+	background: url('../img/icons/07.svg') center no-repeat;
+	left: 0;
+	top: 10.7%;
+	transform-origin: 0 0;
+	transform: rotate(37deg);
+}
